@@ -13,17 +13,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://aziz-malika-invitation.anibus.chatgpt.site'),
   title: 'Азиз & Малика — свадебное приглашение',
   description: 'Мы будем счастливы разделить с вами день нашей свадьбы.',
   openGraph: {
     title: 'Азиз & Малика — свадебное приглашение',
     description: '12 сентября 2026. Откройте наше приглашение.',
     type: 'website',
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Азиз & Малика — 12 сентября 2026' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Азиз & Малика — свадебное приглашение',
     description: '12 сентября 2026. Откройте наше приглашение.',
+    images: ['/og.png'],
   },
 };
 
