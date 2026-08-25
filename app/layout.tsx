@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://aziz-malika-invitation.anibus.chatgpt.site'),
+  metadataBase: new URL('https://kamoliddin-parvina.vercel.app'),
   title: 'Kamoliddin & Parvina — toʻy taklifnomasi',
   description: 'Kamoliddin va Parvinaning toʻy taklifnomasi.',
   openGraph: {
