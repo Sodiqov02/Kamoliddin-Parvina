@@ -73,7 +73,7 @@ button { font: inherit; }
 .map-button { position: relative; border: 1px solid rgba(245,239,228,.35); border-radius: 999px; padding: 16px 22px; background: transparent; color: var(--ivory); font: 600 10px/1 Arial, sans-serif; letter-spacing: .15em; text-transform: uppercase; }
 .map-button span { margin-left: 14px; font-size: 15px; }
 .map-button:disabled { opacity: .58; }
-.placeholder-note { position: relative; margin: 12px 0 0; color: rgba(245,239,228,.4); font: 9px/1.4 Arial, sans-serif; letter-spacing: .08em; }
+.scene--place .placeholder-note { position: relative; margin: 24px 0 80px; color: rgba(245,239,228,.4); font: 11px/1.55 Arial, sans-serif; letter-spacing: .08em; }
 .scene--finale { background: var(--ivory); }
 .final-rings { position: relative; width: 95px; height: 64px; margin: 0 auto 6vh; }
 .final-rings i { position: absolute; width: 58px; height: 58px; border: 1px solid var(--gold); border-radius: 50%; }
