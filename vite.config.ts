@@ -46,14 +46,9 @@ export default defineConfig(async () => {
 
   return {
     css: { postcss: { plugins: [tailwindcss()] } },
-    server: {
-      // Cloudflare Quick Tunnels use a different random subdomain on every
-      // start, so allow the trycloudflare.com domain rather than one hostname.
-      allowedHosts: ['.trycloudflare.com'],
-      ...(isCodexSeatbeltSandbox
-        ? { watch: { useFsEvents: false, usePolling: true } }
-        : {}),
-    },
+    server: isCodexSeatbeltSandbox
+      ? { watch: { useFsEvents: false, usePolling: true } }
+      : undefined,
     plugins: [
       vinext(),
       sites(),
