@@ -14,18 +14,18 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://aziz-malika-invitation.anibus.chatgpt.site'),
-  title: 'Kamoliddin & Parvina — свадебное приглашение',
-  description: 'Мы будем счастливы разделить с вами день нашей свадьбы.',
+  title: 'Kamoliddin & Parvina — toʻy taklifnomasi',
+  description: 'Kamoliddin va Parvinaning toʻy taklifnomasi.',
   openGraph: {
-    title: 'Kamoliddin & Parvina — свадебное приглашение',
-    description: '12 сентября 2026. Откройте наше приглашение.',
+    title: 'Kamoliddin & Parvina — toʻy taklifnomasi',
+    description: '26-sentabr 2026 · Ofarin toʻyxona · 18:00',
     type: 'website',
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Kamoliddin & Parvina — 12 сентября 2026' }],
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Kamoliddin & Parvina — 26-sentabr 2026' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kamoliddin & Parvina — свадебное приглашение',
-    description: '12 сентября 2026. Откройте наше приглашение.',
+    title: 'Kamoliddin & Parvina — toʻy taklifnomasi',
+    description: '26-sentabr 2026 · Ofarin toʻyxona · 18:00',
     images: ['/og.png'],
   },
 };
@@ -36,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
+    <html lang="uz">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
