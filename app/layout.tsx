@@ -37,10 +37,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uz">
+      <head>
+        <link rel="icon" href="favicon.svg" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <script dangerouslySetInnerHTML={{ __html: `
+          document.addEventListener('click', function (event) {
+            var button = event.target.closest('[data-open-invitation]');
+            if (!button || window.__invitationOpenedEarly) return;
+            window.__invitationOpenedEarly = true;
+            document.body.classList.add('invitation-opening');
+            document.querySelector('.story .scene')?.classList.add('scene--active');
+          }, true);
+        ` }} />
       </body>
     </html>
   );
