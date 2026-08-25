@@ -136,9 +136,14 @@ export default function Home() {
           <p className="scene-kicker reveal reveal--1">Ждём вас здесь</p>
           <h2 className="place-name reveal reveal--2">Ofarin<br />toʻyxona</h2>
           <p className="place-copy reveal reveal--3">Начало торжества · 18:00</p>
-          <button className="map-button map-button--disabled reveal reveal--4" type="button" disabled>
+          <a
+            className="map-button reveal reveal--4"
+            href="https://maps.app.goo.gl/TgTqMce928wAXUiv8"
+            target="_blank"
+            rel="noreferrer"
+          >
             Открыть на карте <span>↗</span>
-          </button>
+          </a>
           <div className="swipe-hint reveal reveal--5" aria-hidden="true"><span>финал</span><i>↑</i></div>
         </article>
 
