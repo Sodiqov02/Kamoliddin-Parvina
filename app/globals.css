@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 
-:root { --ivory: #f5efe4; --ink: #26342c; --sage: #708273; --gold: #a98a58; }
+:root { --ivory: #fcf6ec; --ink: #312b28; --sage: #807267; --gold: #b58b49; }
 * { box-sizing: border-box; }
 html, body { margin: 0; min-height: 100%; background: var(--ink); }
 body { overflow: hidden; color: var(--ink); font-family: Georgia, 'Times New Roman', serif; }
@@ -89,3 +89,21 @@ button { font: inherit; }
 @keyframes float { 50% { transform: translateY(-5px); } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
 @media (min-width: 720px) { .scene-card { padding-left: 65px; padding-right: 65px; } }
+
+/* Golden Romance editorial refinement */
+.cover { background: radial-gradient(ellipse at 50% 38%, #fffdf8 0%, #f6ebd9 68%, #ecd9bd 100%); }
+.cover::after { content: ''; position: absolute; inset: 18px; border: 1px solid rgba(181,139,73,.38); pointer-events: none; }
+.cover h1, .names h2, .place-name, .final-title { text-wrap: balance; }
+.cover h1 { font-style: italic; letter-spacing: -.06em; }
+.scene--names { background: radial-gradient(ellipse at 50% 40%, #574438, #2c2521 72%); }
+.scene--date { background: linear-gradient(155deg, #faf2e7 0%, #e8d5bc 100%); }
+.scene--program { background: radial-gradient(circle at 50% 15%, #fffaf0, #efdfc9); }
+.scene--place { background: radial-gradient(ellipse at 50% 50%, #614d41, #302824 78%); }
+.scene--finale { background: radial-gradient(ellipse at center, #fffdfa, #f0e2cf); }
+.program-intro { max-width: 440px; margin: 0 auto 3vh; font-size: clamp(18px, 5vw, 24px); line-height: 1.65; font-style: italic; }
+.program-time { color: var(--gold); font: 600 13px/1.5 Arial,sans-serif; letter-spacing: .2em; }
+.place-help { font: 13px/1.4 Arial,sans-serif; color: #e5cfa9; }
+.names h2 { font-size: clamp(46px, 13.5vw, 108px); overflow-wrap: anywhere; }
+.scene { padding-inline: max(22px, env(safe-area-inset-left)); }
+.open-button:focus-visible { outline: 3px solid var(--gold); outline-offset: 5px; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; } .swipe-hint i { animation: none; } }
