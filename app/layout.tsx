@@ -14,18 +14,18 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://kamoliddin-parvina.vercel.app'),
-  title: 'Kamoliddin & Parvina — toʻy taklifnomasi',
-  description: 'Kamoliddin va Parvinaning toʻy taklifnomasi.',
+  title: 'Kamoliddin & Parvinaxon — toʻy taklifnomasi',
+  description: 'Kamoliddin va Parvinaxonning toʻy taklifnomasi.',
   openGraph: {
-    title: 'Kamoliddin & Parvina — toʻy taklifnomasi',
-    description: '26-sentabr 2026 · Ofarin toʻyxona · 18:00',
+    title: 'Kamoliddin & Parvinaxon — toʻy taklifnomasi',
+    description: '13-noyabr 2026 · Shabnam toʻyxonasi · 18:00',
     type: 'website',
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Kamoliddin & Parvina — 26-sentabr 2026' }],
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Kamoliddin & Parvinaxon — 13-noyabr 2026' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kamoliddin & Parvina — toʻy taklifnomasi',
-    description: '26-sentabr 2026 · Ofarin toʻyxona · 18:00',
+    title: 'Kamoliddin & Parvinaxon — toʻy taklifnomasi',
+    description: '13-noyabr 2026 · Shabnam toʻyxonasi · 18:00',
     images: ['/og.png'],
   },
 };
