@@ -1,7 +1,7 @@
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
-const outputDirectory = path.resolve('dist/client');
+const outputDirectory = path.resolve(process.env.PAGES_OUTPUT_DIR ?? 'dist/client');
 const repositoryName = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? '';
 const ownerName = process.env.GITHUB_REPOSITORY?.split('/')[0] ?? '';
 const defaultBasePath =
