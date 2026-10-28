@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     title: 'Kamoliddin & Parvinaxon — toʻy taklifnomasi',
     description: '13-noyabr 2026 · Shabnam toʻyxonasi · 18:00',
     type: 'website',
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Kamoliddin & Parvinaxon — 13-noyabr 2026' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Kamoliddin & Parvinaxon — 13-noyabr 2026' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Kamoliddin & Parvinaxon — toʻy taklifnomasi',
     description: '13-noyabr 2026 · Shabnam toʻyxonasi · 18:00',
-    images: ['/og.png'],
+    images: ['/opengraph-image'],
   },
 };
 
