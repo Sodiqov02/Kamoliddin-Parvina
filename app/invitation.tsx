@@ -54,7 +54,7 @@ export default function Home() {
           <p className="eyebrow">Sizni mehr bilan taklif qilamiz</p>
           <div className="monogram" aria-hidden="true">K <span>·</span> P</div>
           <h1>Toʻy<br />taklifnomasi</h1>
-          <p className="cover-date">26 · 09 · 2026</p>
+          <p className="cover-date">13 · 11 · 2026</p>
           <button className="open-button" data-open-invitation onClick={openInvitation} type="button">
             <span>Taklifnomani ochish</span>
             <span className="button-arrow" aria-hidden="true">↑</span>
@@ -74,7 +74,7 @@ export default function Home() {
           <div className="names">
             <h2 className="reveal reveal--2">Kamoliddin</h2>
             <span className="ampersand reveal reveal--3">&amp;</span>
-            <h2 className="reveal reveal--4">Parvina</h2>
+            <h2 className="reveal reveal--4">Parvinaxon</h2>
           </div>
           <div className="swipe-hint reveal reveal--5" aria-hidden="true">
             <span>yuqoriga suring</span>
@@ -99,27 +99,26 @@ export default function Home() {
           <div className="grain" />
           <p className="scene-kicker reveal reveal--1">Toʻy kuni</p>
           <div className="date-lockup">
-            <span className="date-day reveal reveal--2">26</span>
-            <div className="date-meta reveal reveal--3"><b>sentabr</b><span>shanba · 2026</span></div>
+            <span className="date-day reveal reveal--2">13</span>
+            <div className="date-meta reveal reveal--3"><b>noyabr</b><span>juma · 2026</span></div>
           </div>
-          <div className="calendar reveal reveal--4" aria-label="26-sentabr 2026">
+          <div className="calendar reveal reveal--4" aria-label="2026-yil 13-noyabr, juma">
             <span>DU</span><span>SE</span><span>CH</span><span>PA</span><span>JU</span><span>SH</span><span>YA</span>
-            {[21,22,23,24,25,26,27,28,29,30,1,2,3,4].map((day, index) => (
-              <i className={day === 26 ? 'chosen' : index > 9 ? 'muted' : ''} key={`${day}-${index}`}>{day}</i>
-            ))}
+            {Array.from({ length: 35 }, (_, index) => {
+              const day = index - 5;
+              const valid = day >= 1 && day <= 30;
+              return <i className={day === 13 ? 'chosen' : !valid ? 'muted' : ''} key={index}>{valid ? day : ''}</i>;
+            })}
           </div>
           <div className="swipe-hint reveal reveal--5" aria-hidden="true"><span>dastur</span><i>↑</i></div>
         </article>
 
         <article className="scene scene--program">
           <div className="grain" />
-          <p className="scene-kicker reveal reveal--1">Ushbu unutilmas oqshomda</p>
-          <h2 className="section-title reveal reveal--2">Dastur</h2>
-          <ol className="timeline">
-            <li className="reveal reveal--2"><time>17:00</time><span><b>Mehmonlarni kutib olish</b><small>uchrashamiz va quchoqlashamiz</small></span></li>
-            <li className="reveal reveal--3"><time>18:00</time><span><b>Tantanali marosim</b><small>eng muhim «ha»</small></span></li>
-            <li className="reveal reveal--4"><time>19:00</time><span><b>Bayram oqshomi</b><small>kechki ovqat, musiqa va raqslar</small></span></li>
-          </ol>
+          <p className="scene-kicker reveal reveal--1">Unutilmas oqshom</p>
+          <h2 className="section-title reveal reveal--2">Sizni kutamiz</h2>
+          <p className="program-intro reveal reveal--3">Aziz farzandlarimiz Kamoliddin va Parvinaxonning nikoh toʻylari munosabati bilan tashkil etilayotgan shodiyona kunimizga lutfan taklif etamiz.</p>
+          <p className="program-time reveal reveal--4">13 noyabr · 18:00</p>
           <div className="swipe-hint reveal reveal--5" aria-hidden="true"><span>manzil</span><i>↑</i></div>
         </article>
 
@@ -127,10 +126,10 @@ export default function Home() {
           <div className="grain" />
           <div className="place-orbit" aria-hidden="true" />
           <p className="scene-kicker reveal reveal--1">Toʻy manzili</p>
-          <h2 className="place-name reveal reveal--2">Ofarin<br />toʻyxona</h2>
+          <h2 className="place-name reveal reveal--2">Shabnam<br />toʻyxonasi</h2>
           <p className="place-copy reveal reveal--3">Boshlanish vaqti<br />18:00</p>
-          <button className="map-button reveal reveal--4" type="button" onClick={() => window.open('https://maps.app.goo.gl/TgTqMce928wAXUiv8', '_blank', 'noopener,noreferrer')}>Xaritada ochish <span>↗</span></button>
-          <p className="placeholder-note reveal reveal--4">Hurmat bilan<br />Axmedov Elmirza aka oilasi<br />Normurodov Alisher aka oilasi</p>
+          <p className="place-help reveal reveal--4">Manzil: Shabnam toʻyxonasi</p>
+          <p className="placeholder-note reveal reveal--4">Hurmat bilan<br />Axmedovlar va Normurodovlar oilasi</p>
           <div className="swipe-hint reveal reveal--5" aria-hidden="true"><span>yakun</span><i>↑</i></div>
         </article>
 
@@ -139,8 +138,8 @@ export default function Home() {
           <div className="final-rings reveal reveal--1" aria-hidden="true"><i /><i /></div>
           <p className="scene-kicker reveal reveal--2">Toʻyimizda uchrashguncha</p>
           <h2 className="final-title reveal reveal--3">Sizni toʻyimizda<br />kutib qolamiz 🤍</h2>
-          <p className="final-date reveal reveal--4">26 · 09 · 2026</p>
-          <p className="final-names reveal reveal--5">Kamoliddin &amp; Parvina</p>
+          <p className="final-date reveal reveal--4">13 · 11 · 2026</p>
+          <p className="final-names reveal reveal--5">Kamoliddin &amp; Parvinaxon</p>
         </article>
       </section>
     </main>
