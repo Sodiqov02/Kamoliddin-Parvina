@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 export default function Home() {
   const [opened, setOpened] = useState(false);
   const [guest, setGuest] = useState('Aziz mehmonimiz');
+  const [imageReady, setImageReady] = useState(true);
   const storyRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -50,9 +51,10 @@ export default function Home() {
         <div className="grain" />
         <div className="cover-ornament cover-ornament--top" />
         <div className="cover-ornament cover-ornament--bottom" />
+        <div className="envelope-flap" aria-hidden="true" />
         <div className="cover-content">
           <p className="eyebrow">Sizni mehr bilan taklif qilamiz</p>
-          <div className="monogram" aria-hidden="true">K <span>·</span> P</div>
+          <div className="wax-seal" aria-hidden="true">K<span>&</span>P</div>
           <h1>Toʻy<br />taklifnomasi</h1>
           <p className="cover-date">13 · 11 · 2026</p>
           <button className="open-button" data-open-invitation onClick={openInvitation} type="button">
@@ -80,6 +82,16 @@ export default function Home() {
             <span>yuqoriga suring</span>
             <i>↑</i>
           </div>
+        </article>
+
+        <article className="scene scene--portrait">
+          <div className="grain" />
+          <p className="scene-kicker reveal reveal--1">Bir muhabbat. Bir umr.</p>
+          <div className="portrait-frame reveal reveal--2">
+            {imageReady ? <img src="/kamoliddin-parvinaxon-couple.webp" alt="Kamoliddin va Parvinaxon" width="1100" height="1021" decoding="async" onError={() => setImageReady(false)} /> : <div className="portrait-fallback"><span>K & P</span></div>}
+          </div>
+          <p className="portrait-caption reveal reveal--3">Kamoliddin <i>&</i> Parvinaxon</p>
+          <div className="swipe-hint reveal reveal--5" aria-hidden="true"><span>davomi</span><i>↑</i></div>
         </article>
 
         <article className="scene scene--welcome">
