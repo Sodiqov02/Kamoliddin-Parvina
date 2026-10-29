@@ -14,7 +14,7 @@
     "preview": "node scripts/preview.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern artifacts",
     "typecheck": "tsc --noEmit",
-    "test": "node --experimental-strip-types --test tests/wedding.test.mjs",
+    "test": "node --experimental-strip-types --test tests/wedding.test.mjs tests/pages-prepare.test.mjs",
     "test:browser": "node scripts/verify-browser.mjs",
     "assets:og": "node scripts/generate-og.mjs",
     "assets:calendar": "node --experimental-strip-types scripts/generate-calendar.mjs"

@@ -1,14 +1,9 @@
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { pagesBase } from './pages-base.mjs';
 
 const outputDirectory = path.resolve(process.env.PAGES_OUTPUT_DIR ?? 'dist/client');
-const repositoryName = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? '';
-const ownerName = process.env.GITHUB_REPOSITORY?.split('/')[0] ?? '';
-const defaultBasePath =
-  repositoryName && repositoryName !== `${ownerName}.github.io`
-    ? `/${repositoryName}`
-    : '';
-const basePath = (process.env.PAGES_BASE_PATH ?? defaultBasePath).replace(/\/$/, '');
+const basePath = pagesBase();
 const relativeBasePath = basePath.replace(/^\//, '');
 const textExtensions = new Set(['.css', '.html', '.js', '.json', '.rsc']);
 
@@ -19,7 +14,14 @@ async function rewriteDirectory(directory) {
       await rewriteDirectory(filePath);
     } else if (textExtensions.has(path.extname(entry.name))) {
       const source = await readFile(filePath, 'utf8');
-      const rewritten = source
+      // Normalize our own prefix first so repeating preparation is harmless.
+      const normalized = basePath
+        ? source
+            .replaceAll(`${basePath}/_next/`, '/_next/')
+            .replaceAll(`"${relativeBasePath}/_next/`, '"_next/')
+            .replaceAll(`'${relativeBasePath}/_next/`, "'_next/")
+        : source;
+      const rewritten = normalized
         .replaceAll('/_next/', `${basePath}/_next/`)
         .replaceAll('"_next/', `"${relativeBasePath}/_next/`)
         .replaceAll("'_next/", `'${relativeBasePath}/_next/`);
